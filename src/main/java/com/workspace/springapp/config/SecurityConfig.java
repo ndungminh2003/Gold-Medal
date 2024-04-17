@@ -45,7 +45,7 @@
 
             http.authorizeHttpRequests((requests) ->
                     requests
-                            .requestMatchers("/*/auth/*")
+                            .requestMatchers("/**/auth/**")
                             .permitAll()
                             .anyRequest().authenticated());
             http.sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
